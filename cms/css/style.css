@@ -1,0 +1,371 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	scroll-behavior: smooth;
+    background-color: rgba(213, 213, 230, 0.5);
+}
+body {
+	font-family : "Open Sans", sans-serif; 
+}
+img {
+	width: auto;
+	height: 40px;
+	margin: 12px 20px;
+}
+.wrapper {
+    margin: auto;
+	width: auto;
+	max-width: 1000px;
+	flex-direction: row;
+}
+.brand {
+	display: flex;
+}
+
+.nav-top {
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 20px;
+	height: 65px;
+	line-height: 60px;
+	background-color: rgb(42, 43, 63);
+	text-align: center;
+}
+.nav-items {
+	width: 100%;
+	height: 7.1vh;
+	position: absolute;
+	right: 0;
+}
+
+.nav-top .nav-items ul {
+	text-align: right;
+	position: absolute;
+	right: 10px;
+	top: 0px;
+}
+.nav-top .nav-items ul li {
+	list-style: none;
+	display: inline;
+	padding: 0 30px;
+	position: relative;
+}
+.nav-top .nav-items ul li a {
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 20px;
+	padding: 0px;
+}
+.nav-top .nav-items a:hover {
+	color: rgb(150, 150, 150);
+}
+button {
+	opacity: 0;
+	z-index: -1;
+	position: absolute;
+	right: 40px;
+	top: 18px;
+}
+.btn-profile span,
+.btn-login span,
+.btn-profile {
+	display: none;
+}
+main {
+	padding: 40px;
+	width: 100%;
+	height: 100%;
+}
+main h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+main h2 {
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+main li{
+	margin: 5% 10%;
+	margin-bottom: 2.5%;
+}
+.row {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	font-size: 0;
+}
+.box {
+	display: inline-block;
+	align-self: stretch;
+	width: 46%;
+	height: 200px;
+	margin: 10px;
+	padding: 10px 20px;
+	border: 1px solid #eee;
+	border-radius: 8px;
+	color: #000;
+	font-size: 16%;
+}
+
+table.users,
+table.posts {
+	border: 1px solid #bbb;
+	border-collapse: collapse;
+	font-size: 16px;
+	color: #000;
+	width: 100%;
+    background-color: rgb(184, 184, 229, 0.4);
+}
+tr:nth-child(2n) {
+	background-color: #eee;
+}
+
+table.users th,
+table.posts th,
+table.users td,
+table.posts td {
+	border: 1px solid #bbb;
+	padding: 10px;
+	text-align: right;
+}
+
+small a {
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	border: 1px solid rgb(0, 0, 0);
+	background-color: #ddd;
+	text-decoration: none;
+	color: #000;
+	padding: 8px 16px;
+	border-radius: 8px;
+	display: inline-block;
+	transition: all 0.3s;
+	margin-top: 10px;
+}
+
+small a:hover,
+small a:hover {
+	background-color: rgb(42, 43, 63);
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	color: #fff;
+}
+
+.profile-photo {
+	width: 30%;
+	padding: 10px;
+}
+.profile-photo img {
+	width: 100%;
+	height: auto;
+	border: 3px solid #ddd;
+	border-radius: 200px;
+	padding: 8px;
+}
+.profile-info {
+	width: 65%;
+	padding: 20px;
+	font-size: 1rem;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.profile-info h2 {
+	font-size: 28px;
+	padding-bottom: 8px;
+	text-align: left;
+}
+.profile-info .address {
+	color: #bbb;
+}
+.profile-info p {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: justify;
+	max-width: 500px;
+}
+.profile-info p i {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.chart {
+	width: 90%;
+	margin: 0 5%;
+	padding: 10px;
+	border: 3px solid #ddd;
+	display: inline-block;
+}
+
+.btn-delete,.btn-edit,.btn-login,.btn-profile{
+	width: 250px;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	border: 1px solid rgb(0, 0, 0);
+	background-color: #ddd;
+	text-decoration: none;
+	color: #000;
+	padding: 8px 16px;
+	border-radius: 8px;
+	margin-top: 10px;
+}
+.btn-edit,
+.btn-delete {
+	transition: all 0.3s;
+}
+.btn-edit:hover,
+.btn-delete:hover {
+	background-color: rgba(42, 43, 63, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	color: #fff;
+}
+
+@media screen and (max-width: 1100px) {
+	main{
+		padding: 0;
+	}
+	main h1{
+		padding-top: 40px;
+	}
+	.nav-top .nav-items ul li {
+		padding: 0;
+	}
+	.nav-items ul li {
+		margin: 0;
+	}
+	.nav-items ul li a {
+		text-align: center;
+		width: 100%;
+		height: 54px;
+		display: block;
+		width: 235px;
+	}
+	.nav-items ul {
+		position: relative;
+		margin-top: 57px;
+		margin-right: 15px;
+		background: rgba(42, 43, 63, 0.8);
+		width: 235px;
+		height: 270px;
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		border-radius: 5px;
+		opacity: 0;
+		transform: translateY(10px);
+		transition: all 0.4s ease;
+		text-align: center;
+		z-index: -1;
+	}
+
+	.nav-items a {
+		color: black;
+		text-decoration: none;
+		width: 235px;
+	}
+	.nav-items li {
+		width: 235px;
+		height: 54px;
+		border-radius: 5px;
+		display: flex;
+		text-align: center;
+	}
+	.nav-items li:hover {
+		background-color: rgba(44, 44, 124, 0.445);
+		z-index: 1;
+
+	}
+	.nav-items button {
+		opacity: 1;
+		z-index: 1;
+		background: none;
+		border: none;
+		color: #fff;
+		text-decoration: none;
+		font-size: 25px;
+		cursor: pointer;
+		margin-right: -15px;
+        margin-top: 0px;
+	}
+	.nav-items button:hover {
+		color: lightslategray;
+	}
+
+	.nav-items button:focus + ul {
+		opacity: 1;
+		z-index: 1;
+	}
+	.chart {
+		width: 90%;
+		padding: 0;
+	}
+}
+@media screen and (max-width: 700px) {
+
+	main h2{
+		margin-left: 11px;
+		margin-right: 11px;
+	}
+	.posts thead tr, .users thead tr{
+		display: none;
+	}
+	.posts tr, .users tr{
+		display:block;
+		padding: 15px;
+	}
+	.posts th, .posts td, .users th, .users td{
+		padding: 0.5em;
+	}
+	.posts td, .users td{
+		text-align: justify;
+		display:block;
+		font-size: 1em;
+		
+	}
+	.posts td::before, .users td::before{
+		width: 30%;
+		content: attr(data-title);
+		font-weight: bold;
+		float: left;
+		text-align: center;
+	}
+	.users td::before{
+		width: 50%;
+	}
+	small a {
+		width:49%;
+	}
+	.profile-photo {
+		width: 80%;
+		padding: 0;
+		margin: 0 auto;
+	}
+	.profile-photo img {
+		width: 70%;
+		margin: 5% 15%;
+	}
+	.profile-info {
+		text-align: center;
+		width: 100%;
+		padding: 0px 40px;
+		margin: 0px;
+	}
+
+	.profile-info h2 {
+		font-size: 28px;
+	}
+	.btn-edit, .btn-delete {
+		width: 49%;
+	}
+}
